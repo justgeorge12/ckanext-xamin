@@ -588,8 +588,8 @@ Table of contents:
 	 align-content: center;
 	 flex-direction: row;
 	 border-bottom: none;
-	 padding-bottom: none;
-	 margin-bottom: none;
+	 padding-bottom: 0;
+	 margin-bottom: 0;
  }
  .dataset-private{
 	 margin-right: 2;
