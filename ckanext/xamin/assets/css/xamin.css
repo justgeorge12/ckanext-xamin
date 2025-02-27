@@ -635,7 +635,7 @@ Table of contents:
 	 position: relative;
  }
  @media (max-width: 384px){
-	nav.account.not-authed{
+	nav.account.not-authed > ul{
 		left:35%
 		
 	}
