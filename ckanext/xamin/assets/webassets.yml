@@ -9,7 +9,7 @@
 
  xamin-css:
   filter: cssrewrite
-  output: ckanext-xamin/%(1.0)s-xamin.css
+  output: ckanext-xamin/%(version)s-xamin.css
   contents:
      - css/xamin.css
 
@@ -21,19 +21,19 @@
 
  group-css:
    filter: cssrewrite
-   output: ckanext-xamin/%(1.0)s-group.css
+   output: ckanext-xamin/%(version)s-group.css
    contents:
       - css/group.css
 
  organization-css:
    filter: cssrewrite
-   output: ckanext-xamin/%(1.0)s-organization.css
+   output: ckanext-xamin/%(version)s-organization.css
    contents:
       - css/organization.css
 
  xamin-scripts:
    fitler: rjsmin
-   output: ckanext-xamin/%(1.0)-s-xamin-scripts.js
+   output: ckanext-xamin/%(version)s-xamin-scripts.js
    contents:
       - js/xamin.js
 
