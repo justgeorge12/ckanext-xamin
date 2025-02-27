@@ -632,8 +632,13 @@ Table of contents:
 	 
  
  nav.account.not-authed{
-	 right: 15%;
 	 position: relative;
+ }
+ @media (max-width: 384px){
+	nav.account.not-authed{
+		left:35%
+		
+	}
  }
  .col-left{
 	 background-color: #437eeb;
