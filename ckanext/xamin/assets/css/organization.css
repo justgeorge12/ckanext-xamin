@@ -1,0 +1,37 @@
+@import 'xamin.css';
+
+.primary{
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.module-content{
+    padding:0;
+}
+.media-grid{
+    margin-left: 60px;
+    background:none;
+    border: none;
+}
+@media screen and (max-width:450px) {
+    .media-grid{
+        margin-left: 80px;
+    }
+}
+
+.media-item{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 40px 0px;
+}
+.media-view:hover{
+    border-color: var(--Tertiary-color);
+    box-shadow: 0 0 0 1px var(--Tertiary-color);
+}
+
+.media-item span.count{
+    color: var(--primary-color);
+}
+.count{
+    font-weight: normal;
+    color: var(--primary-color);
+    text-transform: capitalize;
+}

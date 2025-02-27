@@ -1,0 +1,39 @@
+# xamin-js:
+#   filter: rjsmin
+#   output: ckanext-xamin/%(version)s-xamin.js
+#   contents:
+#     - js/xamin.js
+#   extra:
+#     preload:
+#       - base/main
+
+ xamin-css:
+  filter: cssrewrite
+  output: ckanext-xamin/%(1.0)s-xamin.css
+  contents:
+     - css/xamin.css
+
+ magic-cursor:
+   filter: rjsmin
+   output: ckanext-xamin/%(version)s-cursor.js
+   contents:
+      - js/magic-cursor.js
+
+ group-css:
+   filter: cssrewrite
+   output: ckanext-xamin/%(1.0)s-group.css
+   contents:
+      - css/group.css
+
+ organization-css:
+   filter: cssrewrite
+   output: ckanext-xamin/%(1.0)s-organization.css
+   contents:
+      - css/organization.css
+
+ xamin-scripts:
+   fitler: rjsmin
+   output: ckanext-xamin/%(1.0)-s-xamin-scripts.js
+   contents:
+      - js/xamin.js
+

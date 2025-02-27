@@ -1,0 +1,89 @@
+<footer class="site-footer">
+    <div class="container">
+      {% block footer_content %}
+      <div class="row">
+        <div class="col-lg-4 first-col col-md-8 col-sm-7">
+            <div class="xamin-footer-logo">
+                <img src="https://supco.gr/wp-content/uploads/2025/02/1704205374489007_1005677470.png" width="190px" height="80px">
+            </div>
+            <div class="xamin-footer-text" style="padding-top: 30px;padding-bottom: 40px;">
+                <p>
+                    We ensure better services and better quality at every                     product you might invest in and we shall help grow                        better
+                </p>
+            </div>
+            <div class="xamin-social-media">
+                <a href="#">One</a>
+                <a href="#">Two</a>
+                <a href="#">Three</a>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-5 second-col footer-menu">
+          {% block footer_nav %}
+            <h4> Menu</h4>
+            <ul class="list-unstyled">
+              {% block footer_links %}
+                <li><a href="{{ h.url_for('home.about') }}">{{ _('About {0}').format(g.site_title) }}</a></li>
+              {% endblock %}
+            </ul>
+            
+          {% endblock %}
+        </div>
+        {#<div class="w-100 d-none d-md-block"></div>#}
+        <div class="col-lg-3 col-md-7 col-sm-7 footer-links">
+          <h4>
+            Χρήσιμοι Σύνδεσμοι
+          </h4>
+          <ul class="list-unstyled">
+                <li>
+                    <a href="#">
+                        Link One
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Link Two
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Link Three
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Link Four
+                    </a>
+                </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-5 col-sm-5 footer-popular">
+            <h4>
+                Συχνές Αναζητήσεις
+            </h4>
+            <ul class="list-unstyled">
+                <li>
+                    <a href="#">
+                        Link One
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Link Two
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Link Three
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Link Four
+                    </a>
+                </li>
+            </ul>
+        </div>
+      </div>
+      {% endblock %}
+    </div>
+  </footer>

@@ -1,0 +1,10 @@
+Changes. 
+To make a .mo file:
+sudo apt install gettext
+msgfmt -o [file].mo [file].po
+
+Φορέας - Φορείς - Φορέα  -> Δήμος - Δήμοι - Δήμο
+
+Ομάδα - ομάδας ομάδες -> Κατηγορία - Κατηγορίας - Κατηγορίες
+
+
