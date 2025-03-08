@@ -1,5 +1,5 @@
 {% set dataset_type = h.default_package_type() %}
-
+{% set wordpress_url = "https://ssupco.eu/other-websites/open-data" %}
 {% block header_wrapper %} {% block header_account %}
 <div class="account-masthead">
   <div class="container-fluid">
@@ -105,35 +105,78 @@
 
       <div class="main-navbar collapse navbar-collapse" id="main-navigation-toggle">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          {% block header_site_navigation %}
-            {% block header_site_navigation_tabs %}
-              {% set org_type = h.default_group_type('organization') %}
-              {% set group_type = h.default_group_type('group') %}
+          <li class="menu-li-parent">
+            <a href="{{ wordpress_url }}/dieuthinsi">
+              Η Διεύθυνση
+            </a>
+          </li>
+          <li class="menu-li-parent">
+            <a href="{{ wordpress_url }}/diavouleush">
+              Διαβούλευση
+            </a>
+          </li>
+          <li class="x-collapsable menu-li-parent">
+            <a href="{{ site_url }}/dataset">
+              Δεδομένα
+              <span class="dropdown-arrow"><i class="fa fa-angle-down"></i></span>
+            </a>
+            <ul class="x-dropdown-menu">
+                <li>
+                  <a href="{{ site_url }}/organization"> 
+                    Ανά Δήμο
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ site_url }}/group">
+                    Ανά Κατηγορία
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li class="menu-li-parent">
+            <a href="{{ wordpress_url }}/enimerosi">
+              Ενημέρωση
+            </a>
+          </li>
+          <li class="menu-li-parent">
+            <a href="{{ wordpress_url }}/contact-us">
+              Επικοινωνία
+            </a>
+          </li>
 
-		          {{ h.build_nav_main(
-		            (dataset_type ~ '.search', h.humanize_entity_type('package', dataset_type, 'main nav') or _('Datasets'), ["dataset", "resource"]),
-		            (org_type ~ '.index',
-                  h.humanize_entity_type('organization', org_type, 'main nav') or _('Organizations'), ['organization']),
-		            (group_type ~ '.index',
-                  h.humanize_entity_type('group', group_type, 'main nav') or _('Groups'), ['group']),
-		            ('home.about', _('About')) ) }}
-	          {% endblock %}
-          </ul>
+            {#
+              {% block header_site_navigation %}
+                {% block header_site_navigation_tabs %}
+                  {% set org_type = h.default_group_type('organization') %}
+                  {% set group_type = h.default_group_type('group') %}
 
-      {% endblock %}
+                  {{ h.build_nav_main(
+                    (dataset_type ~ '.search', h.humanize_entity_type('package', dataset_type, 'main nav') or _('Datasets'), ["dataset", "resource"]),
+                    (org_type ~ '.index',
+                      h.humanize_entity_type('organization', org_type, 'main nav') or _('Organizations'), ['organization']),
+                    (group_type ~ '.index',
+                      h.humanize_entity_type('group', group_type, 'main nav') or _('Groups'), ['group']),
+                    ('home.about', _('About')) ) }}
+                {% endblock %}
+                
+              </ul>
+
+              {% endblock %}
+            #}
+        </ul>
       
-      {% block header_site_search %}
-      <div class="search-box">
-          <form class="d-flex" action="{% url_for dataset_type ~ '.search' %}" method="get">
-              <button class="btn-search" type="button" aria-label="{{ _('Submit') }}">
-                  <i class="fa fa-search"></i>
-              </button>
-              <input id="field-sitewide-search" class="input-search form-control" type="text" name="q" 
-                  placeholder="{{ _('Αναζήτηση συνόλων δεδομένων...') }}" 
-                  aria-label="{{ h.humanize_entity_type('package', dataset_type, 'search_placeholder') or _('Search datasets...') }}"/>
-          </form>
-      </div>
-    {% endblock %}
+        {% block header_site_search %}
+        <div class="search-box">
+            <form class="d-flex" action="{% url_for dataset_type ~ '.search' %}" method="get">
+                <button class="btn-search" type="button" aria-label="{{ _('Submit') }}">
+                    <i class="fa fa-search"></i>
+                </button>
+                <input id="field-sitewide-search" class="input-search form-control" type="text" name="q" 
+                    placeholder="{{ _('Αναζήτηση συνόλων δεδομένων...') }}" 
+                    aria-label="{{ h.humanize_entity_type('package', dataset_type, 'search_placeholder') or _('Search datasets...') }}"/>
+            </form>
+        </div>
+        {% endblock %}
       
       </div>
     </nav>
