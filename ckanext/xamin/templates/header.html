@@ -1,5 +1,5 @@
 {% set dataset_type = h.default_package_type() %}
-{% set wordpress_url = "https://ssupco.eu/other-websites/open-data" %}
+{% set wordpress_url = "https://pnai.open-data.gr" %}
 {% block header_wrapper %} {% block header_account %}
 <div class="account-masthead">
   <div class="container-fluid">
@@ -83,7 +83,7 @@
 
       {% block header_logo %}
       {% if g.site_logo %}
-      <a class="logo" href="{{ h.url_for('home.index') }}">
+      <a class="logo" href="https://data.pnai.open-data.gr">
         <img src="{{ h.url_for_static_or_external(g.site_logo) }}" alt="{{ g.site_title }}"
           title="{{ g.site_title }}" />
       </a>
