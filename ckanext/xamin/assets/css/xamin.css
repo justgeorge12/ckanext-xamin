@@ -1152,7 +1152,13 @@ body.no-scroll {
 	 padding: 100px 0 80px 0;
  
  }
- 
+ .xamin-social-share{
+	display: flex;
+	gap: 6px;
+ }
+ .site-footer.xamin-share a{
+	color: var(--primary-color);
+ }
  .footer-links a:before{
 	 content: "\f054";
 	 font-family: Font Awesome\ 5 Free;
@@ -1192,6 +1198,9 @@ body.no-scroll {
  .footer-links a:hover, .footer-popular a:hover, .footer-menu a:hover{
 	 color: var(--primary-color);
 	 text-decoration: none;
+ }
+ .footer-menu-list li {
+	padding: 5px 0;
  }
  
  

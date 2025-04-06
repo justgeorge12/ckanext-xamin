@@ -161,14 +161,24 @@ document.addEventListener("DOMContentLoaded", function () {
 /* Remove Dimoi filtering if organization single page */
 
 document.addEventListener('DOMContentLoaded', () => {
-    if (this.location.href.indexOf('organization') > -1){
+    if (this.location.href.indexOf('/organization/') > -1){
         let parentDiv = document.querySelector('.filters > div');
         if (parentDiv){
             let dimoiSections = parentDiv.querySelectorAll('.module');
             dimoiSections[0].remove();
         };
     };
+
+    // JS Translation of Dataset Description field//
+    if (this.location.href.indexOf('/resource/') > -1){
+        let datasetDescription = document.querySelector('.prose.notes h3');
+        if (datasetDescription){
+            datasetDescription.innerText = "Περιγραφή Συνόλου Δεδομένων";
+        }
+    }
 });
+
+
 
 
 

@@ -76,8 +76,12 @@
                             <a href="{{ h.remove_url_param('_%s_limit' % name, replace=0, extras=extras, alternative_url=alternative_url) }}" class="read-more">{{ _('Show More {facet_type}').format(facet_type=title) }}</a>
                         {% endif %}
                         {% else %}
-                        <a href="{{ h.remove_url_param('_%s_limit' % name, extras=extras, alternative_url=alternative_url) }}" class="read-more">{{ _('Show Only Popular {facet_type}').format(facet_type=title) }}</a>
+                        {#<a href="{{ h.remove_url_param('_%s_limit' % name, extras=extras, alternative_url=alternative_url) }}" class="read-more">{{ _('Show Only Popular {facet_type}').format(facet_type=title) }}</a>#}
+                        <a href="{{ h.remove_url_param('_%s_limit' % name, replace=0, extras=extras, alternative_url=alternative_url) }}" class="read-more">
+                            {{ _('Show More {facet_type}').format(facet_type='Δήμων' if title == 'Δήμοι' else title) }} 
+                          </a>
                         {% endif %}
+                        
                     </p>
                     {% else %}
                     <p class="module-content empty">{{ _('There are no {facet_type} that match this search').format(facet_type=title) }}</p>
