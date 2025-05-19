@@ -80,7 +80,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, 600);
     });
-});
+
+    let textDimoi = document.querySelector('.read-more');
+    if (textDimoi && textDimoi.innerHTML == "Εμφάνιση Περισσοτέρων Δήμοι"){
+        textDimoi.innerHTML = "Εμφάνιση Περισσότερων Δήμων";
+    }});
 
 /* ----- Hamburger menu arrows and dropdown -------- */
 
